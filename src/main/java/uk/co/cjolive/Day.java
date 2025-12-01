@@ -22,8 +22,6 @@ public abstract class Day {
         return task2(false);
     }
 
-    public abstract String getYear();
-
     public abstract long task1(boolean isTest);
 
     public abstract long task2(boolean isTest);
@@ -64,7 +62,11 @@ public abstract class Day {
     }
 
     private String getFilename(boolean isTest) {
-        return getYear() + File.separator + this.getClass().getSimpleName().toLowerCase() + (isTest ? "-test" : "") + ".txt";
+        String packageYear = this.getClass()
+                .getPackageName()
+                .substring(this.getClass().getPackageName().length() - 4);
+        return packageYear + File.separator + this.getClass().getSimpleName().toLowerCase() + (isTest ? "-test" : "")
+                + ".txt";
     }
 
     private Stream<String> fileAsStringStream(String filename) {

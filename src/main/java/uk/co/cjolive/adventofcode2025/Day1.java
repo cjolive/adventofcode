@@ -1,8 +1,9 @@
 package uk.co.cjolive.adventofcode2025;
 
 import java.util.List;
+import uk.co.cjolive.Day;
 
-public class Day1 extends Year2025 {
+public class Day1 extends Day {
 
     @Override
     public long task1(boolean isTest) {
@@ -66,5 +67,4 @@ public class Day1 extends Year2025 {
     int modularSubtraction(int a, int b, int mod) {
         return (a - b + mod) % mod;
     }
-
 }
