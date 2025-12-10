@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "com.diffplug.spotless" version "6.23.3"
+    id("io.freefair.lombok") version "9.1.0"
 }
 
 group 'uk.co.cjolive'

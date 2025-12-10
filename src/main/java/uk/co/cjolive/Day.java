@@ -50,6 +50,11 @@ public abstract class Day {
         return fileAsStringStream(filename);
     }
 
+    protected Stream<String> paddedPuzzleInputStream(char padding, boolean isTest) {
+        String filename = getFilename(isTest);
+        return fileAsStringStream(filename);
+    }
+
     protected Scanner puzzleInputScanner(boolean isTest) {
         try {
             String filename = getFilename(isTest);
